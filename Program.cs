@@ -135,7 +135,7 @@ builder.Services.AddScoped<JwtTokenHandler>();
 // ------------------------
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngular", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
         policy.WithOrigins()
               .AllowAnyMethod()
