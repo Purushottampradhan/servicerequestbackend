@@ -137,9 +137,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins()
-              .AllowAnyMethod()
-              .AllowAnyHeader();
+        policy.AllowAnyOrigin()   // ✅ Allow all origins
+              .AllowAnyMethod()   // ✅ Allow GET, POST, PUT, DELETE, etc.
+              .AllowAnyHeader();  // ✅ Allow all headers
     });
 });
 
